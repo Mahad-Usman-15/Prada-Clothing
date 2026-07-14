@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server"
 import Stripe from "stripe"
 import { getProductsByIds } from "@/lib/woocommerce"
+import { SITE_URL } from "@/lib/site-url"
 
 type CheckoutItem = { id: number; quantity: number; size: string | null }
 
@@ -87,7 +88,7 @@ export async function POST(req: NextRequest) {
       })
     }
 
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
+    const baseUrl = SITE_URL
     // Compact cart encoding for the webhook: [[id, qty, size], ...]
     const cartMeta = JSON.stringify(items.map((i) => [i.id, i.quantity, i.size ?? ""]))
     if (cartMeta.length > 500) {

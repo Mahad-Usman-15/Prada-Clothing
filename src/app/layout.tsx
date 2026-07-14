@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
+import { SITE_URL } from "@/lib/site-url";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import Mobilefooter from "./components/mobile-footer";
@@ -26,7 +27,7 @@ const libreBaskerville = Libre_Baskerville({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Prada — Premium Clothing",
     template: "%s | Prada",
