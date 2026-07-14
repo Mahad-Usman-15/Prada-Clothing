@@ -1,0 +1,44 @@
+# Revision-1
+
+## ApiChanges
+Use context 7 to check Next js 16 uses Response.json in api routes.
+
+## Wordpress Changes
+Currently every category and products is fetched from the Wordpress
+Categories to get from the Wordpress
+
+### Categories
+- boy-clothing
+- clothing
+- girl-clothing
+- men-clothing
+- women-clothing
+
+
+### Tags
+- Trendy Wear 
+- Best Seller
+- Shop Now
+- Fashion For All
+
+## UI Changes
+
+### Contact Page
+- Replace the email with on the contact page(Not the resend-integration to-email) with prada@clothing.com
+
+###Search bar
+- add recomendations on searchbar with productcards as recommendations(server side) with skeleton ui as in reference websites.
+#### Reference Websites
+[Perfume Brand](https://maazsafder.store)
+[Lulusar Clothing Brand](https://www.lulusar.com)
+[Sapphire Clothing Brand](https://pk.sapphireonline.pk)
+
+##Pop Menu
+After 5 seconds of website load,Pop up should showing  50% off with a image and on cliking it routing to the shop page
+
+## Explanations
+Also Explain me the use of Webhooks for stripe integration.
+
+## Recommendations
+- Discuss adding rate-limiting,caching in the existing APIS provding pros and cons of each.
+- Clerk Authentication is used currenlty,but not used to protect any route.
